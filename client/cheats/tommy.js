@@ -1,0 +1,1 @@
+cheats.hits.tommy = function() { triggerNetworkEvent("cheatSetSkin", 0); };

@@ -1,0 +1,38 @@
+{
+    "CAMERA_ZONES": [
+        { "bounds": { "minX": 485, "maxX": 489, "minY": -80, "maxY": -71 }, "interior": 17 },
+        { "bounds": { "minX": 488, "maxX": 493, "minY": -83, "maxY": -74 }, "interior": 0 },
+        { "bounds": { "minX": 208, "maxX": 228, "minY": -1292, "maxY": -1274 }, "interior": 1 },
+        { "bounds": { "minX": 228, "maxX": 235, "minY": -1282, "maxY": -1275 }, "interior": 0 },
+        { "bounds": { "minX": 472, "maxX": 477, "minY": 1113, "maxY": 1135 }, "interior": 4 },
+        { "bounds": { "minX": 478, "maxX": 484, "minY": 1112, "maxY": 1135 }, "interior": 0 },
+        { "bounds": { "minX": 438, "maxX": 460, "minY": 1250, "maxY": 1255 }, "interior": 4 },
+        { "bounds": { "minX": 437, "maxX": 461, "minY": 1257, "maxY": 1264 }, "interior": 0 },
+        { "bounds": { "minX": 369, "maxX": 390, "minY": 1251, "maxY": 1256 }, "interior": 4 },
+        { "bounds": { "minX": 367, "maxX": 390, "minY": 1257, "maxY": 1266 }, "interior": 0 },
+        { "bounds": { "minX": 438, "maxX": 457, "minY": 996, "maxY": 1002 }, "interior": 4 },
+        { "bounds": { "minX": 444, "maxX": 456, "minY": 988, "maxY": 995 }, "interior": 0 },
+        { "bounds": { "minX": 367, "maxX": 389, "minY": 995, "maxY": 1001 }, "interior": 4 },
+        { "bounds": { "minX": 373, "maxX": 386, "minY": 990, "maxY": 993 }, "interior": 0 },
+        { "bounds": { "minX": 350, "maxX": 355, "minY": 1112, "maxY": 1134 }, "interior": 4 },
+        { "bounds": { "minX": 343, "maxX": 349, "minY": 1113, "maxY": 1132 }, "interior": 0 },
+        { "bounds": { "minX": -669, "maxX": -666, "minY": 1212, "maxY": 1218 }, "interior": 0 },
+        { "bounds": { "minX": -669, "maxX": -662, "minY": 1219, "maxY": 1226 }, "interior": 10 }
+    ],
+    "CAMERA_ZONES_UNDERGROUND": [
+        { "bounds": { "minX": -390, "maxX": -367, "minY": -554, "maxY": -547 }, "interior": 0 },
+        { "bounds": { "minX": -388, "maxX": -368, "minY": -571, "maxY": -555 }, "interior": 2 }
+    ],
+    "CAMERA_ZONES_ROOF": [
+        { "bounds": { "minX": -340, "maxX": -329, "minY": -577, "maxY": -570 }, "interior": 0 },
+        { "bounds": { "minX": -336, "maxX": -327, "minY": -583, "maxY": -577 }, "interior": 2 }
+    ],
+    "CAMERA_ZONES_GROUND": [
+        { "bounds": { "minX": -356, "maxX": -350, "minY": -590, "maxY": -577 }, "interior": 0 },
+        { "bounds": { "minX": -356, "maxX": -327, "minY": -580, "maxY": -576 }, "interior": 2 }
+    ],
+    "CAMERA_ZONES_ALWAYS": [
+        { "bounds": { "minX": 387, "maxX": 398, "minY": -478, "maxY": -475 }, "interior": 12 },
+        { "bounds": { "minX": 390, "maxX": 413, "minY": -468, "maxY": -464 }, "interior": 0 }
+    ]
+}

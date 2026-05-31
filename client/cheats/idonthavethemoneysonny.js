@@ -1,0 +1,1 @@
+cheats.hits.idonthavethemoneysonny = function() { triggerNetworkEvent("cheatSetSkin", 115); };

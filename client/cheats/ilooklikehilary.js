@@ -1,0 +1,1 @@
+cheats.hits.ilooklikehilary = function() { triggerNetworkEvent("cheatSetSkin", 111); };

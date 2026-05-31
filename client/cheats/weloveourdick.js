@@ -1,0 +1,1 @@
+cheats.hits.weloveourdick = function() { triggerNetworkEvent("cheatSetSkin", 112); };
