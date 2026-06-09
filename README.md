@@ -31,14 +31,11 @@ Full VC single-player campaign ported to GTAC's multiplayer engine. 50 missions,
 
 ## Configuration
 
-Create `roxas-campaign/server/config/admins.json`:
+Create `roxas-campaign/admins.json`:
 ```json
-["PlayerName1", "PlayerName2"]
-```
-
-Create `roxas-campaign/server/config/camera.json` for fixed-camera interiors:
-```json
-{}
+{
+    "YourName": "yourPassword"
+}
 ```
 
 Edit the resource's `client.js` — search for `CHEATS_ENABLED` / `CHEATS_ADMIN_ONLY` at the top.
