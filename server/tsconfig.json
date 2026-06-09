@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "ES2015",
+		"lib": ["ES2015", "ES2017.Object"],
+		"types": ["gtac-types"],
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"moduleDetection": "auto",
+		"allowJs": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"forceConsistentCasingInFileNames": true,
+		"composite": true,
+		"tsBuildInfoFile": "../../../dist/.tsbuildinfo/server.tsbuildinfo"
+	},
+	"include": [
+		"./**/*.ts",
+		"../data/**/*.ts"
+	],
+	"exclude": ["node_modules"]
+}

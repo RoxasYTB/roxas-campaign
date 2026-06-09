@@ -1,0 +1,16 @@
+{
+  "name": "gtac-server",
+  "private": true,
+  "devDependencies": {
+    "esbuild": "^0.25.12",
+    "gtac-server-node": "^0.0.8",
+    "gtac-types": "^0.0.3",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "npx gtac-server build",
+    "start": "npx gtac-server start",
+    "dev": "npx gtac-server dev",
+    "export": "npx gtac-server export"
+  }
+}

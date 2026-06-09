@@ -1,0 +1,115 @@
+var missionsToGet: Record<
+	string,
+	{ toFinish: number; id: number; require?: number[]; minAssets?: number }[]
+> = {
+	AVERY: [
+		{ toFinish: Mission.RIOT, id: Mission.FOUR_IRON },
+		{ toFinish: Mission.FOUR_IRON, id: Mission.DEMOLITION_MAN },
+		{ toFinish: Mission.PHNOM_PENH_86, id: Mission.TWO_BIT_HIT },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	BIKERS: [
+		{ toFinish: Mission.PSYCHO_KILLER, id: Mission.ALLOY_WHEELS_OF_STEEL },
+		{
+			toFinish: Mission.ALLOY_WHEELS_OF_STEEL,
+			id: Mission.MESSING_WITH_THE_MAN,
+		},
+		{ toFinish: Mission.MESSING_WITH_THE_MAN, id: Mission.HOG_TIED },
+		{ toFinish: Mission.HOG_TIED, id: Mission.PUBLICITY_TOUR },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	CORTEZ: [
+		{ toFinish: Mission.RIOT, id: Mission.TREACHEROUS_SWINE },
+		{ toFinish: Mission.TREACHEROUS_SWINE, id: Mission.MALL_SHOOTOUT },
+		{ toFinish: Mission.MALL_SHOOTOUT, id: Mission.GUARDIAN_ANGELS },
+		{ toFinish: Mission.GUARDIAN_ANGELS, id: Mission.SIR_YES_SIR },
+		{ toFinish: Mission.SIR_YES_SIR, id: Mission.ALL_HANDS_ON_DECK },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	CUBANS: [
+		{ toFinish: Mission.TWO_BIT_HIT, id: Mission.STUNT_BOAT_CHALLENGE },
+		{ toFinish: Mission.STUNT_BOAT_CHALLENGE, id: Mission.CANNON_FODDER },
+		{ toFinish: Mission.STUNT_BOAT_CHALLENGE, id: Mission.JUJU_SCRAMBLE },
+		{ toFinish: Mission.JUJU_SCRAMBLE, id: Mission.BOMBS_AWAY },
+		{ toFinish: Mission.BOMBS_AWAY, id: Mission.DIRTY_LICKINS },
+		{ toFinish: Mission.CANNON_FODDER, id: Mission.NAVAL_ENGAGEMENT },
+		{ toFinish: Mission.DIRTY_LICKINS, id: Mission.TROJAN_VOODOO },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	DIAZ: [
+		{ toFinish: Mission.ALL_HANDS_ON_DECK, id: Mission.THE_CHASE },
+		{ toFinish: Mission.THE_CHASE, id: Mission.PHNOM_PENH_86 },
+		{ toFinish: Mission.PHNOM_PENH_86, id: Mission.THE_FASTEST_BOAT },
+		{ toFinish: Mission.THE_FASTEST_BOAT, id: Mission.SUPPLY_AND_DEMAND },
+		{ toFinish: Mission.DEATH_ROW, id: Mission.RUB_OUT },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	FILM: [
+		{ toFinish: Mission.INTERGLOBAL_FILMS_BUY, id: Mission.RECRUITMENT_DRIVE },
+		{ toFinish: Mission.RECRUITMENT_DRIVE, id: Mission.DILDO_DODO },
+		{ toFinish: Mission.DILDO_DODO, id: Mission.MARTHAS_MUG_SHOT },
+		{ toFinish: Mission.MARTHAS_MUG_SHOT, id: Mission.G_SPOTLIGHT },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	HAITIANS: [
+		{ toFinish: Mission.STUNT_BOAT_CHALLENGE, id: Mission.JUJU_SCRAMBLE },
+		{ toFinish: Mission.JUJU_SCRAMBLE, id: Mission.BOMBS_AWAY },
+		{ toFinish: Mission.BOMBS_AWAY, id: Mission.DIRTY_LICKINS },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	KCABS: [
+		{ toFinish: Mission.KAUFMAN_CABS_BUY, id: Mission.V_I_P },
+		{ toFinish: Mission.V_I_P, id: Mission.FRIENDLY_RIVALRY },
+		{ toFinish: Mission.FRIENDLY_RIVALRY, id: Mission.CABMAGGEDON },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	KENT: [{ toFinish: Mission.SUPPLY_AND_DEMAND, id: Mission.DEATH_ROW }],
+	LAWYER: [
+		{ toFinish: -1, id: Mission.THE_PARTY },
+		{ toFinish: Mission.THE_PARTY, id: Mission.BACK_ALLEY_BRAWL },
+		{ toFinish: Mission.BACK_ALLEY_BRAWL, id: Mission.JURY_FURY },
+		{ toFinish: Mission.JURY_FURY, id: Mission.RIOT },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	LOVEFIST: [
+		{ toFinish: Mission.RUB_OUT, id: Mission.LOVE_JUICE },
+		{ toFinish: Mission.LOVE_JUICE, id: Mission.PSYCHO_KILLER },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	MALIBUCLUB: [
+		{ toFinish: Mission.MALIBU_CLUB_BUY, id: Mission.NO_ESCAPE },
+		{ toFinish: Mission.NO_ESCAPE, id: Mission.THE_SHOOTIST },
+		{ toFinish: Mission.THE_SHOOTIST, id: Mission.THE_DRIVER },
+		{ toFinish: Mission.THE_DRIVER, id: Mission.THE_JOB },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	PHIL: [
+		{ toFinish: Mission.THE_JOB, id: Mission.GUN_RUNNER },
+		{ toFinish: Mission.GUN_RUNNER, id: Mission.BOOMSHINE_SAIGON },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	PHONE: [{ toFinish: Mission.JURY_FURY, id: Mission.ROAD_KILL }],
+	PHONEFIVE: [
+		{ toFinish: Mission.RUB_OUT, id: Mission.CHECK_OUT_AT_THE_CHECK_IN },
+	],
+	PHONEFOUR: [
+		{
+			toFinish: Mission.CHECK_OUT_AT_THE_CHECK_IN,
+			id: Mission.LOOSE_ENDS,
+			require: [Mission.THE_SHOOTIST],
+		},
+	],
+	PHONEONE: [{ toFinish: Mission.THE_FASTEST_BOAT, id: Mission.AUTOCIDE }],
+	PHONETWO: [{ toFinish: Mission.ROAD_KILL, id: Mission.WASTE_THE_WIFE }],
+	PRINTWORKS: [
+		{ toFinish: Mission.G_SPOTLIGHT, id: Mission.SPILLING_THE_BEANS },
+		{ toFinish: Mission.SPILLING_THE_BEANS, id: Mission.HIT_THE_COURIER },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	TOMMY: [
+		{ toFinish: Mission.RUB_OUT, id: Mission.BAR_BRAWL },
+		{ toFinish: Mission.THE_JOB, id: Mission.KEEP_YOUR_FRIENDS_CLOSE },
+		{ toFinish: Mission.BOOMSHINE_SAIGON, id: -1 },
+	],
+	TOMMYTHREE: [{ toFinish: Mission.BAR_BRAWL, id: Mission.COP_LAND }],
+};
