@@ -1,12 +1,12 @@
 {
 	"server": {
-		"name": "Roxas's Server",
+		"name": "Roxas's Campaign Server (All Missions & Story Mode COOP) - GTAC",
 		"port": 22000,
 		"httpport": 22000,
 		"httpserver": true,
 		"game": "gta:vc",
+		"gamemode": "Campaign",
 		"maxPlayers": 32,
-		"password": "6257",
 		"minclientversion": "1.5.0",
 		"announce": true,
 		"streaminterval": 1000,
