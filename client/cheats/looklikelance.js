@@ -1,1 +1,0 @@
-cheats.hits.looklikelance = function() { triggerNetworkEvent("cheatSetSkin", 116); };

@@ -1,1 +1,0 @@
-cheats.hits.rockandrollman = function() { triggerNetworkEvent("cheatSetSkin", 118); };

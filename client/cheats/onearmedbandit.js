@@ -1,1 +1,0 @@
-cheats.hits.onearmedbandit = function() { triggerNetworkEvent("cheatSetSkin", 113); };

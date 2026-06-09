@@ -1,1 +1,0 @@
-cheats.hits.flyingways = function() { triggerNetworkEvent("cheatSpawnVehicle", 151); };

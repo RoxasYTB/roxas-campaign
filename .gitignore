@@ -1,4 +1,1 @@
-*.log
-.DS_Store
-Thumbs.db
-saves/
+server/

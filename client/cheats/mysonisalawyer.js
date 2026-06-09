@@ -1,1 +1,0 @@
-cheats.hits.mysonisalawyer = function() { triggerNetworkEvent("cheatSetSkin", 109); };

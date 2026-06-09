@@ -1,1 +1,0 @@
-var inMission = new Map();

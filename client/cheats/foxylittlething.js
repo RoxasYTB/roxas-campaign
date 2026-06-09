@@ -1,1 +1,0 @@
-cheats.hits.foxylittlething = function() { triggerNetworkEvent("cheatSetSkin", 117); };
