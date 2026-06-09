@@ -109,12 +109,12 @@ addNetworkHandler("playMission", (missionId: number) => {
 		kcabsRewardUnlocked = missionCache.indexOf(Mission.CABMAGGEDON) !== -1;
 		rebuildMissionsPositions();
 		if (typeof refreshSavePoints === "function") refreshSavePoints();
-	if (typeof rebuildBuyPointPickups === "function") rebuildBuyPointPickups();
-	if (typeof applyPropertyGarages === "function") applyPropertyGarages();
-	if (typeof rebuildPropertyRevenue === "function") rebuildPropertyRevenue();
-	if (typeof applyPropertyChanges === "function") applyPropertyChanges();
-	if (typeof checkCompleteBonus === "function") checkCompleteBonus();
-});
+		if (typeof rebuildBuyPointPickups === "function") rebuildBuyPointPickups();
+		if (typeof applyPropertyGarages === "function") applyPropertyGarages();
+		if (typeof applyPropertyRevenue === "function") applyPropertyRevenue();
+		if (typeof applyPropertyChanges === "function") applyPropertyChanges();
+		if (typeof checkCompleteBonus === "function") checkCompleteBonus();
+	});
 
 addNetworkHandler("setCheatConfig", (enabled: boolean, adminOnly: boolean) => {
 	CHEATS_ENABLED = enabled;
@@ -131,7 +131,7 @@ addNetworkHandler("applyMissions", (missionsJson: string) => {
 	if (typeof rebuildBuyPointState === "function") rebuildBuyPointState();
 	if (typeof rebuildBuyPointPickups === "function") rebuildBuyPointPickups();
 	if (typeof applyPropertyGarages === "function") applyPropertyGarages();
-	if (typeof rebuildPropertyRevenue === "function") rebuildPropertyRevenue();
+	if (typeof applyPropertyRevenue === "function") applyPropertyRevenue();
 	if (typeof applyPropertyChanges === "function") applyPropertyChanges();
 	if (typeof checkCompleteBonus === "function") checkCompleteBonus();
 	showHelp("Missions synced from server save file");
