@@ -116,6 +116,11 @@ addNetworkHandler("syncMissionMarkers", (missionsJson: string) => {
 	if (typeof checkCompleteBonus === "function") checkCompleteBonus();
 });
 
+addNetworkHandler("setCheatConfig", (enabled: boolean, adminOnly: boolean) => {
+	CHEATS_ENABLED = enabled;
+	CHEATS_ADMIN_ONLY = adminOnly;
+});
+
 addNetworkHandler("applyMissions", (missionsJson: string) => {
 	fileMissions = JSON.parse(missionsJson);
 	rebuildEffectiveMissions();

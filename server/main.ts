@@ -49,6 +49,8 @@ addEventHandler("OnPlayerJoined", (_event, client) => {
 		triggerNetworkEvent("setAdmin", client, true);
 	}
 
+	triggerNetworkEvent("setCheatConfig", client, CHEATS_ENABLED, CHEATS_ADMIN_ONLY);
+
 	var data = loadPlayerSave(client) as SaveData | null;
 	if (data) {
 		if (data.playerposition) {
