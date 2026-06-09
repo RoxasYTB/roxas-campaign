@@ -8,10 +8,10 @@ Drop `roxas-campaign/` into your server's `resources/`, add `<resource src="roxa
 
 ## Commands
 
-**Player:** `/help` — show commands
+**Player:** `/help`
 
-**Admin:** `/password <pw>` then `/admin` to auth.  
-`/op <name> [pw]` `/deop <name>` — manage admins  
+**Admin:** `/password <pw>` — auth with the server password.  
+`/op <name> [pw]` `/deop <name>` — manage other admins  
 `/tp <loc|player|x,y,z>` `/save` `/god` — tools  
 `/block <player>` `/unblock` — player management  
 Cheat codes in chat (admin only by default)
@@ -23,7 +23,10 @@ Create `roxas-campaign/admins.json`:
 {"YourName": "yourPassword"}
 ```
 
-Edit `client.js` — search `CHEATS_ENABLED` / `CHEATS_ADMIN_ONLY`.
+Edit `roxas-campaign/config.json` (auto-created on first start):
+```json
+{"cheats": {"enabled": true, "adminOnly": true}, "admin": {"needPassword": true}}
+```
 
 ## Technical
 
