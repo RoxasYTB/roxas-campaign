@@ -48,52 +48,7 @@
 	"resourcesDir": "resources",
 	"resources": [
 		{
-			"name": "roxas-campaign",
-		"server": [
-			"../../node_modules/gtac-types/src/runtime/shared/enums",
-			"data",
-			"../../node_modules/gtac-types/src/runtime/shared",
-			"server",
-				"server/admin",
-				"server/cheats",
-				"server/commands",
-				"server/fix",
-				"server/missions",
-				"server/saves"
-			],
-		"client": [
-			"../../node_modules/gtac-types/src/runtime/shared/enums",
-			"data",
-				"../../node_modules/gtac-types/src/runtime/shared",
-				"client/config",
-				"client",
-				"client/fixes",
-				"client/commands",
-				"client/cheats",
-				"client/barriers",
-				"client/missions",
-				"client/saves",
-				"client/buypoints",
-				"client/main",
-				"client/interiors"
-			],
-			"serverOrder": {
-				"server": ["config", "console", "utils", "player", "health", "main"]
-			},
-			"clientOrder": {
-				"client/cheats": ["init", "_register"],
-				"client": ["config", "utils", "blips", "stats"],
-				"client/config": ["missions", "settings"],
-				"client/commands": ["freeze", "teleport", "network", "scm-sync"],
-				"client/missions": ["utils", "spheres", "handler", "group"],
-				"client/saves": ["create", "visibility", "handler"],
-				"client/buypoints": ["data", "pickups", "detection", "purchase", "property", "clothes", "autosave", "init"],
-				"client/main": ["data", "handler", "init"],
-				"client/interiors": ["data", "handler", "switch"]
-			},
-			"files": [
-				{ "src": "pricedownbl.ttf", "from": "client/fixes/pricedownbl.ttf", "type": "client" }
-			]
+			"name": "roxas-campaign"
 		}
 	],
 	"confFile": "server.xml"

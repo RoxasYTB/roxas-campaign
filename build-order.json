@@ -1,0 +1,12 @@
+{
+	"server": ["config", "console", "utils", "player", "health", "main"],
+	"client/cheats": ["init", "_register"],
+	"client": ["config", "utils", "blips", "stats"],
+	"client/config": ["missions", "settings"],
+	"client/commands": ["freeze", "teleport", "network", "scm-sync"],
+	"client/missions": ["utils", "spheres", "handler", "group"],
+	"client/saves": ["create", "visibility", "handler"],
+	"client/buypoints": ["data", "pickups", "detection", "purchase", "property", "clothes", "autosave", "init"],
+	"client/main": ["data", "handler", "init"],
+	"client/interiors": ["data", "handler", "switch"]
+}
