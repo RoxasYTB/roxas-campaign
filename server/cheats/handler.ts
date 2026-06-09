@@ -7,7 +7,7 @@ function spawnCheatVehicle(client: Client, vehicleId: number): Vehicle | null {
 	var z = client.player.position.z + (isHeli ? HELI_Z_OFFSET : 1);
 	var x = client.player.position.x + Math.sin(heading) * CHEAT_SPAWN_DIST;
 	var y = client.player.position.y + Math.cos(heading) * CHEAT_SPAWN_DIST;
-	var vehicle = gta.createVehicle(vehicleId, x, y, z, heading);
+	var vehicle = gta.createVehicle(vehicleId, new Vec3(x, y, z), heading);
 	if (vehicle) {
 		cheatVehicles.push({
 			id: vehicle.id,

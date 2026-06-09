@@ -4,7 +4,7 @@
   "devDependencies": {
     "esbuild": "^0.25.12",
     "gtac-server-node": "^0.0.19",
-    "gtac-types": "^0.0.3",
+    "gtac-types": "^0.0.5",
     "typescript": "^5.9.3"
   },
   "scripts": {

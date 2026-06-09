@@ -80,9 +80,7 @@ addEventHandler("OnPlayerJoined", (_event, client) => {
 			if (!kcabsVehicle) {
 				var cab = gta.createVehicle(
 					cabModel,
-					Position.CAB[0],
-					Position.CAB[1],
-					Position.CAB[2],
+					new Vec3(Position.CAB[0], Position.CAB[1], Position.CAB[2]),
 					Rotation.CAB
 				);
 				if (cab) {
