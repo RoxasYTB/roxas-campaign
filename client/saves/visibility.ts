@@ -1,3 +1,6 @@
+var savePickupPrevState: (Pickup | null)[] = [];
+var savePickupCollectedAt: number[] = [];
+
 function hideSavePoints(): void {
 	for (var i = 0; i < savePoints.length; i++) {
 		var sp = savePoints[i];
@@ -31,6 +34,13 @@ function updateSavePointVisibility(): void {
 
 	for (var i = 0; i < savePoints.length; i++) {
 		var sp = savePoints[i];
+
+		// Detect engine collection: pickup existed before, now gone
+		if (savePickupPrevState[i] && !sp.pickup) {
+			savePickupCollectedAt[i] = Date.now();
+		}
+		savePickupPrevState[i] = sp.pickup;
+
 		var dist = dist3d(
 			px,
 			py,
@@ -40,12 +50,15 @@ function updateSavePointVisibility(): void {
 			sp.position[2]
 		);
 
+		var isNear = dist <= MISSION_TRIGGER_DIST;
+		var cooldown = savePickupCollectedAt[i] && Date.now() - savePickupCollectedAt[i] < IV_3000;
 		var shouldShow =
-			!gta.onMission && !groupMissionActive && (isPaused || sp.toFinish === MISSION_TRIGGER_DIST || dist <= BLIP_VISIBILITY_DIST);
+			!gta.onMission && !groupMissionActive && (isPaused || sp.toFinish === MISSION_TRIGGER_DIST || dist <= BLIP_VISIBILITY_DIST)
+			&& !(cooldown);
 
 		if (shouldShow && !sp.pickup) {
 			var pos = new Vec3(sp.position[0], sp.position[1], sp.position[2]);
-			sp.pickup = gta.createPickup(PickupModel.SAVE, pos, PickupType.AVAILABLE);
+			sp.pickup = gta.createPickup(PickupModel.SAVE, pos, PickupType.ON_FOOT);
 			if (sp.flag !== "noblip") {
 				var showSpBlip = true;
 				if (sp.flag === "TOMMY")

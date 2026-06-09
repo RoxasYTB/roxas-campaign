@@ -102,13 +102,13 @@ addNetworkHandler("playMission", (missionId: number) => {
 	selectedMission = missionId;
 });
 
-addNetworkHandler("syncMissionMarkers", (missionsJson: string) => {
-	if (gta.onMission) return;
-	fileMissions = JSON.parse(missionsJson);
-	rebuildEffectiveMissions();
-	kcabsRewardUnlocked = missionCache.indexOf(Mission.CABMAGGEDON) !== -1;
-	rebuildMissionsPositions();
-	if (typeof rebuildSavePoints === "function") rebuildSavePoints();
+	addNetworkHandler("syncMissionMarkers", (missionsJson: string) => {
+		if (gta.onMission) return;
+		fileMissions = JSON.parse(missionsJson);
+		rebuildEffectiveMissions();
+		kcabsRewardUnlocked = missionCache.indexOf(Mission.CABMAGGEDON) !== -1;
+		rebuildMissionsPositions();
+		if (typeof refreshSavePoints === "function") refreshSavePoints();
 	if (typeof rebuildBuyPointPickups === "function") rebuildBuyPointPickups();
 	if (typeof applyPropertyGarages === "function") applyPropertyGarages();
 	if (typeof rebuildPropertyRevenue === "function") rebuildPropertyRevenue();
@@ -126,7 +126,7 @@ addNetworkHandler("applyMissions", (missionsJson: string) => {
 	rebuildEffectiveMissions();
 	kcabsRewardUnlocked = missionCache.indexOf(Mission.CABMAGGEDON) !== -1;
 	rebuildMissionsPositions();
-	if (typeof rebuildSavePoints === "function") rebuildSavePoints();
+	if (typeof refreshSavePoints === "function") refreshSavePoints();
 	if (typeof refreshClothesPickups === "function") refreshClothesPickups();
 	if (typeof rebuildBuyPointState === "function") rebuildBuyPointState();
 	if (typeof rebuildBuyPointPickups === "function") rebuildBuyPointPickups();
